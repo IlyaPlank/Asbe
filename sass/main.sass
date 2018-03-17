@@ -1,0 +1,272 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	margin: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	text-decoration: none
+	&:link
+		color: #393939
+		border-bottom: none
+	&:visited
+		color: #393939
+	&:hover
+		color: #393939
+		text-decoration: none
+	&:active
+		color: #393939
+		border-bottom: none
+
+.bg
+	height: 100vh
+	width: 100% 
+	background-size: cover
+	background-position: 0 center
+
+.top-menu
+	background-color: rgba(0,0,0, .3)
+
+.head
+	position: relative
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		content: ''
+		background-color: rgba(0,0,0, .6)
+
+.scrol
+	position: absolute
+	bottom: 5px
+	left: 50%
+	margin-left: -20px
+	width: 40px
+	height: 80px
+	border: 2px solid rgba(255,255,255, .7)
+	border-radius: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+	&__line
+		width: 2px
+		height: 60px
+		background-color: rgba(255,255,255, .7)
+
+.wrap-hex-head
+	position: absolute
+	top: -100px
+	left: 50%
+	margin-left: -95px
+	.hex-top
+		position: relative
+		width: 190px
+		height: 109.70px
+		background-color: $accent
+		margin: 54.85px 0
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 0
+			border-left: 95px solid transparent
+			border-right: 95px solid transparent
+		&:before
+			bottom: 100%
+			border-bottom: 54.85px solid $accent
+		&:after
+			top: 100%
+			width: 0
+			border-top: 54.85px solid $accent
+
+
+.main-mnu
+	text-transform: uppercase
+	font-family: robotoBol
+	font-size: 18px
+	ul
+		padding-left: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		li
+			flex-grow: 1
+			list-style-type: none
+			text-align: center
+			a
+				color: #fff
+				border-top: 3px solid transparent
+				border-bottom: 3px solid transparent
+				transition: all .2s ease-out
+				&:hover
+					border-top: 3px solid $accent
+					border-bottom: 3px solid $accent
+
+.main-title
+	margin-top: 110px
+	text-align: center
+	p
+		margin: 0
+		font-family: robotoLig
+		font-size: 90px
+		color: #fff
+		text-transform: uppercase
+
+.hexagon-title
+	margin-top: 30px
+	display: flex
+	justify-content: center
+	.half-hex
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		.hex-wrap
+			position: relative
+			.color-fill
+				height: 160px
+				width: 160px
+				transform: rotate(90deg)
+				.hex
+					fill-opacity: 0.4
+					stroke: #fff
+					stroke-width: 2px
+					transform: scale(0.53)
+			.number
+				position: absolute
+				top: 20px
+				left: 50%
+				margin-left: -70px
+				font-size: 70px
+				width: 140px
+				font-family: robotoLig
+				text-align: center
+			.number-text
+				position: absolute
+				bottom: -10px
+				right: -5px
+				text-transform: uppercase
+				font-size: 28px
+				width: 80px
+				transform: rotate(-30deg)
+				text-align: center
+			.text-days, .days
+				color: $blue
+			.text-hous, .hous
+				color: $green
+			.text-mins, .mins
+				color: $orange
+			.text-secs, .secs
+				color: $accent
+
+
+.hamburger
+	position: fixed
+	top: 0
+	right: 0
+	background-color: rgba(#fff, .2)
+	padding-bottom: 10px
+	z-index: 101
+
+.hidden-mnu
+	display: none
+	z-index: 100
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0, .9)
+	ul
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		padding-left: 0
+		margin: 0
+		li
+			list-style-type: none
+			margin: 10px 0
+			a
+				color: #fff
+				text-transform: uppercase
+
+.title-section
+	margin-top: 80px
+	margin-bottom: 50px
+	text-align: center
+	h1
+		text-transform: uppercase
+		font-size: 50px
+		color: $accent
+		font-family: robotoLig
+		margin: 0
+		border-bottom: 3px solid $accent
+		display: inline-block
+		line-height: 1.2
+		&:after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 50%
+			margin-left: -35px
+			width: 70px
+			height: 5px
+			background-color: $accent
+
+.about-wrap
+	h3
+		font-family: robotoBol
+		font-size: 30px
+		text-transform: uppercase
+@import "media" // Всегда в конце
