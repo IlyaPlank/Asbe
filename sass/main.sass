@@ -66,6 +66,16 @@ a
 		color: #393939
 		border-bottom: none
 
+h1, h2, h3
+	line-height: 1
+
+.s-gray
+	background-color: #ebebeb
+.s-darck
+	background-color: #000
+section
+	padding-top: 80px
+	padding-bottom: 80px
 .bg
 	height: 100vh
 	width: 100% 
@@ -242,7 +252,6 @@ a
 				text-transform: uppercase
 
 .title-section
-	margin-top: 80px
 	margin-bottom: 50px
 	text-align: center
 	h1
@@ -266,7 +275,94 @@ a
 
 .about-wrap
 	h3
+		margin: 20px 0
 		font-family: robotoBol
 		font-size: 30px
 		text-transform: uppercase
+
+.service
+	display: flex
+	margin-top: 45px
+	&__wrap-img
+		flex-basis: 160px
+		border: 2px solid #000
+		height: 160px
+		min-width: 160px
+		background-color: #000
+		overflow: hidden
+		.rotate-block
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			transform: rotate(45deg)
+			background-color: #fff
+			img
+				transform: rotate(-45deg)
+	&__description
+		margin-left: 30px
+		h3
+			margin: 0
+			font-size: 18px
+			text-transform: uppercase
+		p
+			font-size: 12px
+
+.skill
+	ul
+		padding-left: 0
+		display: flex
+		flex-wrap: wrap
+		//flex-direction: column
+		justify-content: center
+		align-items: center
+		li
+			margin-top: 30px
+			width: 100%
+			list-style-type: none
+	&__text
+		text-transform: uppercase
+		font-size: 18px
+	&__bg
+		position: relative
+		width: 100%
+		height: 5px
+		background-color: #d7d7d7
+		&__percent
+			position: absolute
+			top: 0
+			left: 0
+			height: 5px
+			background-color: $accent
+			&:after
+				position: absolute
+				top: -30px
+				right: 0
+				color: $accent
+				border-top: 5px solid $accent
+		.html5
+			width: 95%
+			&:after
+				content: '95%'
+		.css3
+			width: 90%
+			&:after
+				content: '90%'
+		.jquery
+			width: 85%
+			&:after
+				content: '85%'
+		.javascript
+			width: 90%
+			&:after
+				content: '90%'
+		.php
+			width: 78%
+			&:after
+				content: '78%'
+
+
+
+
 @import "media" // Всегда в конце
