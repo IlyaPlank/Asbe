@@ -78,7 +78,7 @@ section
 	padding-bottom: 80px
 .bg
 	height: 100vh
-	width: 100% 
+	width: 100%
 	background-size: cover
 	background-position: 0 center
 
@@ -362,7 +362,67 @@ section
 			&:after
 				content: '78%'
 
+//About
+.a-hexagon
+	position: relative
+	width: 120px
+	height: 69.28px
+	background-color: transparent
+	margin: 34.64px 0
+	border-left: solid 2px $accent
+	border-right: solid 2px $accent
+	&:before, &:after
+		content: ""
+		position: absolute
+		z-index: 1
+		width: 84.85px
+		height: 84.85px
+		transform: scaleY(0.5774) rotate(-45deg)
+		background-color: inherit
+		left: 15.5736px
+	&:before
+		top: -42.4264px
+		border-top: solid 2.8284px $accent
+		border-right: solid 2.8284px $accent
+	&:after
+		bottom: -42.4264px
+		border-bottom: solid 2.8284px $accent
+		border-left: solid 2.8284px $accent
+	
 
-
+.about
+	&-item
+		margin-top: 50px
+		&-logo
+			.a-hexagon
+				margin: 0 auto
+				display: flex
+				justify-content: center
+				align-items: center
+				.logo
+					z-index: 10
+					font-family: linea
+					font-size: 72px
+					color: #474747
+					transition: all .4s ease
+		&-description
+			text-align: center
+			h3
+				text-transform: uppercase
+				font-family: robotoBol
+				font-size: 18px
+				margin-top: 80px
+				margin-bottom: 5px
+				transition: all .4s ease
+			p
+				font-family: robotoLig
+				font-size: 14px
+		&:hover
+			.a-hexagon
+				background-color: $accent
+				.logo
+					color: #fff
+			h3
+				color: $accent
 
 @import "media" // Всегда в конце
