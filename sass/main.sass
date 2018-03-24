@@ -527,22 +527,45 @@ section
 	display: flex
 	align-items: center
 	justify-content: center
+	flex-wrap: wrap
 	margin-top: 30px
 	&__email
-		min-width: 740px
+		max-width: 740px
+		min-width: 300px
 		height: 90px
 		border: none
 		font-size: 40px
 		padding-left: 35px
+		z-index: 10
 	&__btn
-		height: 105px
-		width: 175px
-		font-family: linea
-		font-size: 80px
-		background-color: $accent
-		border: none
-		color: #fff
-		margin-left: -3px
-		cursor: pointer
+		position: relative
+		&:after, &:before
+			left: 0
+			position: absolute
+			content: ""
+			width: 15px
+			height: 15px
+			background-color: $accent
+			opacity: .99
+		&:after
+			bottom: 0
+			transform: rotate(-45deg)
+			transform-origin: left bottom
+		&:before
+			top: 0
+			transform: rotate(45deg)
+			transform-origin: left top
+			
+
+.subscribe-btn
+	height: 105px
+	width: 175px
+	font-family: linea
+	font-size: 80px
+	background-color: $accent
+	border: none
+	color: #fff
+	cursor: pointer
+	margin: 0
 	
 @import "media" // Всегда в конце
