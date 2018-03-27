@@ -29,43 +29,47 @@
 
 <body>
 
-	<header class="head bg" style="background-image: url(img/bg.jpeg);">
+	<header id="home" class="head bg" style="background-image: url(img/bg.jpeg);">
 		<div class="top-menu">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-2 order-lg-2">
-						<div class="wrap-hex-head">
-							<div class="hex-top">
+						<div class="top-menu__hex-head">
+							<div class="top-menu__hex-top">
 
 							</div>
+							<svg version="1.1" class="logo top-menu__logo" viewBox="0 0 800 600">
+								<path class="st0" d="M60.6,0c0,0,329.5,163.2,680.1,0c-27.2,45.3-108.8,187.4-131.5,229.7C323.6,341.6,60.6,0,60.6,0z" />
+								<path class="st0" d="M149.8,152.6c0,0,300.8,273.6,396,208.6c1.5-1.5-139,238.8-139,238.8L149.8,152.6z" />
+							</svg>
 						</div>
 					</div>
 					<div class="d-none d-lg-block col-lg-5 order-lg-1">
-						<nav class="main-mnu">
+						<nav class="top-menu__main-mnu">
 							<ul>
 								<li>
-									<a href="#">home</a>
+									<a href="#home">home</a>
 								</li>
 								<li>
-									<a href="#">about</a>
+									<a href="#about">about</a>
 								</li>
 								<li>
-									<a href="#">service</a>
+									<a href="#service">service</a>
 								</li>
 							</ul>
 						</nav>
 					</div>
 					<div class="d-none d-lg-block col-lg-5 order-lg-3">
-						<nav class="main-mnu">
+						<nav class="top-menu__main-mnu">
 							<ul>
 								<li>
-									<a href="#">work</a>
+									<a href="#work">work</a>
 								</li>
 								<li>
-									<a href="#">subscribe</a>
+									<a href="#sub">subscribe</a>
 								</li>
 								<li>
-									<a href="#">contact</a>
+									<a href="#contact">contact</a>
 								</li>
 							</ul>
 						</nav>
@@ -127,7 +131,7 @@
 		</div>
 	</header>
 
-	<section class="s-about">
+	<section id="about" class="s-about">
 		<div class="container">
 			<div class="row title-section">
 				<div class="col-12">
@@ -209,7 +213,7 @@
 		</div>
 	</section>
 
-	<section class=" s-about s-gray">
+	<section id="service" class=" s-services s-gray">
 		<div class="container">
 			<div class="row title-section">
 				<div class="col-12">
@@ -291,7 +295,7 @@
 		</div>
 	</section>
 
-	<section class="s-work s-dark">
+	<section id="work" class="s-work s-dark">
 		<div class="container">
 			<div class="row title-section">
 				<div class="col-12">
@@ -357,7 +361,7 @@
 		</div>
 	</section>
 
-	<section class="s-subscribe s-gray">
+	<section id="sub" class="s-subscribe s-gray">
 		<div class="container">
 			<div class="row title-section">
 				<div class="col-12">
@@ -375,7 +379,7 @@
 		</div>
 	</section>
 
-	<section class="s-contact" style="background-image: url(img/bg-foot.png)">
+	<section id="contact" class="s-contact" style="background-image: url(img/bg-foot.png)">
 		<div class="container">
 			<div class="row title-section">
 				<div class="col-12">
@@ -388,27 +392,27 @@
 						<div class="contact-form__wrap">
 							<div class="contact-form__grid">
 								<div class="contact-form__inner">
-									<input class="contact-form__input contact-form__name" type="text" name="" id="" required placeholder="Name">
+									<input class="contact-form__input contact-form__name" type="text" name="name"  required placeholder="Name">
 									<div class="btn contact-form__btn">n</div>
 								</div>
 								<div class="contact-form__inner">
-									<input class="contact-form__input contact-form__url" type="url" name="" id="" required placeholder="Website">
+									<input class="contact-form__input contact-form__url" type="url" name="url"  required placeholder="Website">
 									<div class="btn contact-form__btn">&#xe028;</div>
 								</div>
 							</div>
 							<div class="contact-form__grid">
 								<div class="contact-form__inner">
-									<input class="contact-form__input contact-form__enail" type="email" name="" id="" required placeholder="Email">
+									<input class="contact-form__input contact-form__email" type="email" name="email"  required placeholder="Email">
 									<div class="btn contact-form__btn">&</div>
 								</div>
 								<div class="contact-form__inner">
-									<input class="contact-form__input contact-form__subject" type="text" name="" id="" required placeholder="Subject">
+									<input class="contact-form__input contact-form__subject" type="text" name="subject" required placeholder="Subject">
 									<div class="btn contact-form__btn">`</div>
 								</div>
 							</div>
 						</div>
 						<div class="contact-form__wrap">
-							<textarea class="contact-form__textarea" name="" id="" required placeholder="Text"></textarea>
+							<textarea class="contact-form__textarea" name="textarea" required placeholder="Text"></textarea>
 							<button type="submit" class="btn contact-form__submit">send</button>
 						</div>
 					</form>
@@ -504,6 +508,12 @@
 				</li>
 			</ul>
 		</div>
+	</div>
+	<div class="done">
+		<div class="wrap-check">
+			<i class="fas fa-check"></i>
+		</div>
+		<div class="h3">Данные успешно отправленны!</div>
 	</div>
 
 	<link rel="stylesheet" href="css/main.min.css">

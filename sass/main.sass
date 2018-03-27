@@ -82,9 +82,6 @@ section
 	background-size: cover
 	background-position: 0 center
 
-.top-menu
-	background-color: rgba(0,0,0, .3)
-
 .head
 	position: relative
 	&:before
@@ -113,12 +110,14 @@ section
 		height: 60px
 		background-color: rgba(255,255,255, .7)
 
-.wrap-hex-head
-	position: absolute
-	top: -100px
-	left: 50%
-	margin-left: -95px
-	.hex-top
+.top-menu
+	background-color: rgba(0,0,0, .3)
+	&__hex-head
+		position: absolute
+		top: -100px
+		left: 50%
+		margin-left: -95px
+	&__hex-top
 		position: relative
 		width: 190px
 		height: 109.70px
@@ -137,9 +136,7 @@ section
 			top: 100%
 			width: 0
 			border-top: 54.85px solid $accent
-
-
-.main-mnu
+	&__main-mnu
 	text-transform: uppercase
 	font-family: robotoBol
 	font-size: 18px
@@ -160,6 +157,16 @@ section
 				&:hover
 					border-top: 3px solid $accent
 					border-bottom: 3px solid $accent
+	&__logo
+		position: absolute
+		top: 100px
+		left: 18px
+		width: 150px	
+		z-index: 100
+
+.logo
+	.st0
+		fill: #fff
 
 .main-title
 	margin-top: 110px
@@ -216,7 +223,6 @@ section
 				color: $orange
 			.text-secs, .secs
 				color: $accent
-
 
 .hamburger
 	position: fixed
@@ -389,7 +395,6 @@ section
 		border-bottom: solid 2.8284px $accent
 		border-left: solid 2.8284px $accent
 	
-
 .about
 	&-item
 		margin-top: 50px
@@ -715,5 +720,28 @@ section
 		text-transform: uppercase
 	&__red
 		color: $accent
+
+.done
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0, .97)
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	z-index: 1000
+	i
+		font-family: fS
+		font-size: 30px
+		color: $green
+	.h3
+		font-family: robotoLig
+		text-transform: uppercase
+		font-size: 40px
+		color: #fff
 
 @import "media" // Всегда в конце
